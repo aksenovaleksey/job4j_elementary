@@ -4,11 +4,11 @@ public class Converter {
 
     public static float rubleToEuro(float value) {
 
-        return value / 90;
+        return value / 70;
     }
 
     public static float rubleToDollar(float value) {
 
-        return value / 75;
+        return value / 60;
     }
 }
