@@ -15,9 +15,7 @@ public class PrimeNumber {
             if (isPrime) {
                 count++;
             }
-                }        return count;
+        }        return count;
     }
 }
-
-
 
