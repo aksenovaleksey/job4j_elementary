@@ -15,6 +15,7 @@ public class NumberPyramid {
             System.out.println();
         }
     }
+
     public static void main(String[] args) {
         System.out.println("Number pyramid of height 3:");
         draw(3);
