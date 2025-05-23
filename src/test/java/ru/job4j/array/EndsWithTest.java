@@ -19,4 +19,19 @@ public class EndsWithTest {
         boolean result = EndsWith.endsWith(word, postfix);
         assertThat(result).isFalse();
     }
+
+    @Test
+        public void whenPostfixMoreWord() {
+        char[] word = {'H', 'e', 'l', 'l', 'o'};
+        char[] postfix = {'l', 'a', 'l', 'a', 'l', 'a'};
+        boolean result = EndsWith.endsWith(word, postfix);
+        assertThat(result).isFalse();
+    }
+    @Test
+    public void whenPostfix0() {
+        char[] word = {'H', 'e', 'l', 'l', 'o'};
+        char[] postfix = new char[0];
+        boolean result = EndsWith.endsWith(word, postfix);
+        assertThat(result).isFalse();
+    }
 }
