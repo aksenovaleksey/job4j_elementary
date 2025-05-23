@@ -19,4 +19,4 @@ public class EqualLastTest {
         boolean result = EqualLast.check(left, right);
         assertThat(result).isFalse();
     }
-}
+   }
