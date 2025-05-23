@@ -11,12 +11,10 @@ public class FindLoop {
         }
         return result;
     }
+
     public static int indexInRange(int[] data, int element, int start, int finish) {
         int result = -1;
-        if (data == null || data.length == 0 || start < 0 || finish < 0 || start > finish || finish >= data.length) {
-            return result;
-        }
-        for (int i = start; i <= finish; i++) {
+            for (int i = start; i <= finish; i++) {
             if (data[i] == element) {
                 result = i;
                 break;
