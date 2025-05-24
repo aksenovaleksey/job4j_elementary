@@ -67,4 +67,4 @@ public class FindLoopTest {
         int expected = 4;
         assertThat(result).isEqualTo(expected);
     }
-}
+    }
