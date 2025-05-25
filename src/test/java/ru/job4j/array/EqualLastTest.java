@@ -19,6 +19,7 @@ public class EqualLastTest {
         boolean result = EqualLast.check(left, right);
         assertThat(result).isFalse();
     }
+
     @Test
     public void whenArrayLeft0() {
         int[] left = new int[0];
@@ -26,6 +27,7 @@ public class EqualLastTest {
         boolean result = EqualLast.check(left, right);
         assertThat(result).isFalse();
     }
+
     @Test
     public void whenArrayRight0() {
         int[] left = {3, 3, 4};

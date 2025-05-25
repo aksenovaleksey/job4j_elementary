@@ -27,6 +27,7 @@ public class EndsWithTest {
         boolean result = EndsWith.endsWith(word, postfix);
         assertThat(result).isFalse();
     }
+
     @Test
     public void whenPostfix0() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
