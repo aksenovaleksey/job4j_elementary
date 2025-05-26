@@ -15,4 +15,40 @@ public class MatrixCheckTest {
         boolean result = MatrixCheck.monoHorizontal(input, row);
         assertThat(result).isTrue();
     }
+
+    @Test
+    public void whenisFalse() {
+        char[][] input = {
+                {' ', ' ', ' '},
+                {'X', ' ', 'X'},
+                {' ', ' ', ' '},
+        };
+        int row = 2;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    public void whenHasMonoVertical() {
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+        };
+        int column = 2;
+        boolean result = MatrixCheck.monoVertical(input, column);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void whenisFalse2() {
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {' ', ' ', ' '},
+                {' ', ' ', 'X'},
+        };
+        int column = 2;
+        boolean result = MatrixCheck.monoVertical(input, column);
+        assertThat(result).isFalse();
+    }
 }
