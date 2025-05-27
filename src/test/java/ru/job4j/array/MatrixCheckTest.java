@@ -19,9 +19,9 @@ public class MatrixCheckTest {
     @Test
     public void whenisFalse() {
         char[][] input = {
-                {' ', ' ', ' '},
+                {' ', 'X', ' '},
                 {'X', ' ', 'X'},
-                {' ', ' ', ' '},
+                {' ', ' ', 'X'},
         };
         int row = 2;
         boolean result = MatrixCheck.monoHorizontal(input, row);
