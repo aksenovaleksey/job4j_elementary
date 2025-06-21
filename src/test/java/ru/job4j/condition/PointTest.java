@@ -1,31 +1,34 @@
 package ru.job4j.condition;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class PointTest {
 
     @Test
-    void whenPoints00And20Then2() {
-        int x1 = 0, y1 = 0, x2 = 2, y2 = 0;
+    void whenDistanceBetween00And02Then2() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double result = a.distance(b);
         double expected = 2.0;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whenPointsMinus1Minus1And1And1Then2Dot83() {
-        int x1 = -1, y1 = -1, x2 = 1, y2 = 1;
-        double expected = 2.83;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    void whenDistanceBetween00And34Then5() {
+        Point a = new Point(0, 0);
+        Point b = new Point(3, 4);
+        double result = a.distance(b);
+        double expected = 5.0;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    void whenPointsMinus2Minus2And2And2Then5Dot66() {
-        int x1 = -2, y1 = -2, x2 = 2, y2 = 2;
-        double expected = 5.66;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    void whenDistanceBetweenNegativePointsThenPositive() {
+        Point a = new Point(-1, -1);
+        Point b = new Point(-4, -5);
+        double result = a.distance(b);
+        double expected = 5.0; // sqrt((-3)^2 + (-4)^2) = 5
+        assertThat(result).isEqualTo(expected);
     }
 }
