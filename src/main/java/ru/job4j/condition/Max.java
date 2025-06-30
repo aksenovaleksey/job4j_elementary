@@ -9,7 +9,7 @@ public class Max {
         return this.max(this.max(a, b), c);
     }
 
-    public int max(int a, int b, int c, int d) {
+     public int max(int a, int b, int c, int d) {
         return this.max(this.max(a, b), this.max(c, d));
     }
 }

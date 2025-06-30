@@ -37,7 +37,7 @@ public class MaxTest {
     public void whenNegativeNumbers() {
         Max max = new Max();
         int result = max.max(-5, -10, -3, -15);
-        assertThat(result).isEqualTo(-3);
+         assertThat(result).isEqualTo(-3);
     }
 }
 
