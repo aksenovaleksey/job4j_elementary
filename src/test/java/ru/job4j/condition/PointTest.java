@@ -28,7 +28,16 @@ class PointTest {
         Point a = new Point(-1, -1);
         Point b = new Point(-4, -5);
         double result = a.distance(b);
-        double expected = 5.0; // sqrt((-3)^2 + (-4)^2) = 5
+        double expected = 5.0;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenDistance3dCalledThenCorrect() {
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(2, 3, 6);
+        double result = Point.distance3d(a, b);
+        double expected = 7.0;
         assertThat(result).isEqualTo(expected);
     }
 }
